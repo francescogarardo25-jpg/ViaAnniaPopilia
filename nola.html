@@ -6,8 +6,7 @@
     <title>Nola - Via Popilia</title>
     <style>
         body {
-            background-color: #d7d2cb; /* Colore pietra serena */
-            background-image: url('https://www.transparenttextures.com/patterns/pave.png'); /* Texture pietra */
+            background-color: #f0ede5; /* Crema neutro per far risaltare il verde */
             font-family: 'Georgia', serif;
             margin: 0;
             padding: 50px 20px;
@@ -16,56 +15,64 @@
         }
 
         .document-plate {
-            background-color: #f2efea; /* Marmo chiaro */
-            max-width: 800px;
+            background-color: #ffffff;
+            max-width: 850px;
             padding: 60px;
-            box-shadow: inset 0 0 100px rgba(0,0,0,0.1), 10px 10px 30px rgba(0,0,0,0.2);
-            border: 1px solid #c0b9b0;
-            position: relative;
+            border: 2px solid #2d5a27; /* BORDO VERDE FELIX */
+            box-shadow: 20px 20px 0px #2d5a27; /* OMBRA NETTA VERDE FELIX */
+            animation: slideUp 1s ease-out;
         }
 
-        /* Effetto incisione per il titolo */
         h1 {
             text-align: center;
-            color: #4a4a4a;
+            color: #2d5a27; /* VERDE FELIX */
             font-size: 3.5rem;
-            margin: 0 0 40px 0;
-            letter-spacing: 10px;
+            margin: 0 0 30px 0;
+            letter-spacing: 8px;
             text-transform: uppercase;
-            border-bottom: 2px solid #4a4a4a;
-            padding-bottom: 10px;
+            border-bottom: 5px double #2d5a27;
         }
 
         h2, h3 {
-            color: #7d4427; /* Colore bronzo antico */
+            color: #2d5a27; /* VERDE FELIX */
             text-transform: uppercase;
             letter-spacing: 2px;
-            border-bottom: 1px solid #dcd7d0;
             margin-top: 40px;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before, h3::before {
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 2px;
+            background-color: #bc6c25; /* TOCCO TERRACOTTA */
+            margin-right: 15px;
         }
 
         p {
             color: #333;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             line-height: 1.9;
             text-align: justify;
             margin-bottom: 25px;
-            border-left: 3px solid #7d4427; /* Filo di bronzo laterale */
-            padding-left: 20px;
+            padding: 10px 0;
         }
 
-        /* Link che sembrano incisioni dorate */
+        /* LINK IN TERRACOTTA */
         a {
-            color: #a67c00;
+            color: #bc6c25; /* TERRACOTTA */
             text-decoration: none;
             font-weight: bold;
-            border-bottom: 1px dashed #a67c00;
+            border-bottom: 2px solid #bc6c25;
+            transition: all 0.3s;
         }
 
         a:hover {
-            color: #7d4427;
-            border-bottom: 1px solid #7d4427;
+            color: #2d5a27; /* CAMBIA IN VERDE AL PASSAGGIO */
+            border-bottom: 2px solid #2d5a27;
         }
 
         .footer-nav {
@@ -73,30 +80,30 @@
             margin-top: 60px;
         }
 
+        /* PULSANTE TERRACOTTA */
         .btn-return {
             display: inline-block;
-            padding: 12px 30px;
-            border: 2px solid #4a4a4a;
-            color: #4a4a4a;
+            padding: 15px 40px;
+            background-color: #bc6c25; /* TERRACOTTA */
+            color: white !important;
             text-transform: uppercase;
             font-weight: bold;
             letter-spacing: 2px;
+            text-decoration: none;
+            border-radius: 4px;
             transition: all 0.3s;
+            box-shadow: 0 4px 0px #8a4f1b;
         }
 
         .btn-return:hover {
-            background-color: #4a4a4a;
-            color: #f2efea;
+            background-color: #2d5a27; /* VERDE FELIX AL PASSAGGIO */
+            box-shadow: 0 4px 0px #1a3a16;
+            transform: translateY(-2px);
         }
 
-        /* Animazione sobria */
-        .document-plate {
-            animation: stoneFade 1.2s ease-out;
-        }
-
-        @keyframes stoneFade {
-            from { opacity: 0; transform: scale(0.98); }
-            to { opacity: 1; transform: scale(1); }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -105,9 +112,21 @@
     <div class="document-plate">
         <h1>Nola</h1>
 
-        <p>Nel II-I secolo a.C. la città nolana era occupata da popolazioni Opico-Osche, fu conquistata dai Sanniti con i quali raggiunse un certo splendore tanto che la città aveva una propria moneta.
+        <p>Nel II-I secolo a.C. la città nolana era occupata da popolazioni Opico-Osche, fu conquistata dai Sanniti con i quali raggiunse un certo splendore tanto che la città aveva una propria moneta. 
         Dopo le guerre sannitiche divenne alleata di Roma, l’imperatore Ottaviano Augusto possedeva una villa dove morì nel 14 d.C.</p>
 
         <h2>Economia Nolana</h2>
-        <p>Nola era il cuore della Campania Felix, nel II secolo ritroviamo una produzione massiccia di cereali, ma soprattutto delle nocciole e olive.
-        In questo periodo si intensifica la produzione di vini, grazie alla vicinanza al Vesuvio, che venivano commerciati in tutto il Mediterraneo attraverso il porto di Pozzuoli, questi erano tra i più pregiati dell’Impero Romano e il più famoso era il vitigno greco, considerato uno dei
+        <p>Nola era il cuore della <a href="#">Campania Felix</a>, nel II secolo ritroviamo una produzione massiccia di cereali, ma soprattutto delle nocciole e olive.
+        In questo periodo si intensifica la produzione di vini, grazie alla vicinanza al Vesuvio, che venivano commerciati in tutto il Mediterraneo attraverso il porto di Pozzuoli.</p>
+
+        <h3>Estensione</h3>
+        <p>La città era difesa da una possente cinta muraria di circa 3 chilometri e questa definiva anche lo status di cittadino.
+        Nola era considerata una delle città più grandi e meglio fortificate della Campania, tanto da essere definita una <b>piccola Roma</b> dallo storico greco Polibio.</p>
+
+        <div class="footer-nav">
+            <a href="mappa_interattiva.html" class="btn-return">← Torna alla mappa</a>
+        </div>
+    </div>
+
+</body>
+</html>
