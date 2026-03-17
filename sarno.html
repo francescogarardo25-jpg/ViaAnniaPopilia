@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarno - Via Popilia</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f4f7f6; /* Grigio chiarissimo neutro */
+            color: #333;
+        }
+
+        /* --- STILE SCHEDE (Card Style della Index) --- */
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid #007ba7; /* LINEA ACCENTO BLU FIUME */
+        }
+
+        /* --- TITOLI IN BLU FIUME (#007ba7) --- */
+        h1 {
+            text-align: center;
+            color: #007ba7;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #007ba7;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Icona stilizzata prima del titolo h2 (opzionale) */
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #007ba7;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        strong {
+            color: #0056b3; /* Un blu leggermente più scuro per l'enfasi */
+        }
+
+        /* --- BOTTONE DI NAVIGAZIONE (Stile Index) --- */
+        .btn-torna {
+            display: block;
+            text-align: center;
+            margin: 50px auto 0;
+            padding: 15px 35px;
+            background-color: #007ba7; /* Blu Fiume */
+            color: white !important;
+            border-radius: 50px;
+            text-decoration: none;
+            width: fit-content;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,123,167,0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-torna:hover {
+            background-color: #0056b3; /* Blu più scuro al passaggio */
+        }
+
+        /* --- ANIMAZIONE FADE-IN --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card, h1, .btn-torna {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SARNO</h1>
+
+    <div class="card">
+        <h2>La Città delle Acque</h2>
+        <p>
+            Sarno, situata alle falde dell'omonimo monte, è storicamente definita la **"Città delle Acque"**. La sua importanza strategica lungo la Via Popilia era legata non solo alla fertilità del suolo, ma soprattutto alle sorgenti del fiume Sarno, che garantivano rifornimento e irrigazione per l'intera valle. Anticamente conosciuta come *Sarnum*, la città fu un centro vitale per il commercio agroalimentare tra l'entroterra e la costa.
+        </p>
+        <p>
+            Il suo legame con Roma divenne indissolubile dopo le Guerre Sannitiche, trasformandola in un fiorente *municipium*. La presenza della Via Popilia facilitò il trasporto dei rinomati prodotti della terra, consolidando la sua vocazione agricola che perdura ancora oggi.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Luoghi di Interesse Archeologico</h2>
+        <p>
+            Il passato monumentale di Sarno è testimoniato da importanti reperti. Il **Teatro Ellenistico-Romano** è uno dei gioielli nascosti della Campania: situato in località Foce, risale al II sec. a.C. e poteva ospitare migliaia di spettatori, confermando l'importanza culturale della città.
+        </p>
+        <p>
+            Altro sito fondamentale è l'**Acquedotto Augusteo del Serino**, una straordinaria opera ingegneristica che attraversava il territorio di Sarno per portare l'acqua fino a Napoli e alla *Classis Misenensis* (la flotta romana a Miseno). I resti dei suoi piloni sono ancora visibili nel paesaggio, simboli della potenza tecnica di Roma.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Il Canale del Gusto</h2>
+        <p>
+            Sarno è il cuore pulsante della produzione del **Pomodoro San Marzano DOP**, l'"oro rosso" della valle. La particolare composizione del terreno, arricchito dalle ceneri vesuviane e irrigato dalle acque pure delle sorgenti, conferisce a questo prodotto un sapore unico, dolce e acido allo stesso tempo, celebrato in tutto il mondo.
+        </p>
+        <p>
+            La tradizione gastronomica è strettamente legata ai cicli agricoli e alle festività religiose, mantenendo vivo un legame profondo con la terra e con il fiume, che rimane la vera anima della città.
+        </p>
+    </div>
+
+    <a href="index.html" class="btn-torna">Torna alla Mappa della Via Popilia</a>
+
+</body>
+</html>
