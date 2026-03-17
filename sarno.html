@@ -6,136 +6,111 @@
     <title>Sarno - Via Popilia</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.8;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #f4f7f6; /* Grigio chiarissimo neutro */
-            color: #333;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
         }
 
-        /* --- STILE SCHEDE (Card Style della Index) --- */
-        .card {
-            background: white;
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-            border-left: 5px solid #007ba7; /* LINEA ACCENTO BLU FIUME */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        /* --- TITOLI IN BLU FIUME (#007ba7) --- */
         h1 {
+            color: #007ba7; /* Blu Fiume */
             text-align: center;
-            color: #007ba7;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 15px;
         }
 
         h2 {
             color: #007ba7;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 0;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-        
-        /* Icona stilizzata prima del titolo h2 (opzionale) */
-        h2::before {
-            content: '';
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            background-color: #007ba7;
-            border-radius: 50%;
-            margin-right: 15px;
+            border-bottom: 2px solid #007ba7;
+            padding-bottom: 5px;
+            margin-top: 30px;
         }
 
         p {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-align: justify;
         }
 
-        strong {
-            color: #0056b3; /* Un blu leggermente più scuro per l'enfasi */
+        /* --- STILE DEI LINK NEL TESTO --- */
+        a {
+            color: #d35400; /* Arancio Mattone */
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        /* --- BOTTONE DI NAVIGAZIONE (Stile Index) --- */
-        .btn-torna {
+        a:hover {
+            text-decoration: underline;
+            color: #e67e22;
+        }
+
+        /* --- STILE DEL BOTTONE FINALE --- */
+        .footer-link {
             display: block;
             text-align: center;
-            margin: 50px auto 0;
-            padding: 15px 35px;
-            background-color: #007ba7; /* Blu Fiume */
-            color: white !important;
-            border-radius: 50px;
+            margin-top: 30px;
+            padding: 12px;
+            background-color: #007ba7;
+            color: white !important; /* Forza il bianco per il bottone */
             text-decoration: none;
-            width: fit-content;
+            border-radius: 5px;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 10px rgba(0,123,167,0.3);
-            transition: background-color 0.3s ease;
         }
 
-        .btn-torna:hover {
-            background-color: #0056b3; /* Blu più scuro al passaggio */
+        .footer-link:hover {
+            background-color: #0056b3;
+            text-decoration: none;
         }
 
-        /* --- ANIMAZIONE FADE-IN --- */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Box per l'immagine */
+        .image-box {
+            max-width: 100%;
+            margin: 20px 0;
+            text-align: center;
         }
 
-        .card, h1, .btn-torna {
-            animation: fadeIn 0.8s ease-out;
+        .image-box img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .copyright {
+            font-size: 0.7rem;
+            color: #999;
+            text-align: right;
+            margin-top: 5px;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
 
-    <h1>SARNO</h1>
+<div class="container">
+    <h1>Sarno</h1>
+    
+    <p>Sarno è storicamente conosciuta come la <strong>"Città delle Acque"</strong>. Situata ai piedi del monte omonimo, la sua importanza lungo la <a href="https://it.wikipedia.org/wiki/Via_Popilia">Via Popilia</a> era legata alle sorgenti del fiume Sarno, risorsa vitale per l'agricoltura e i commerci dell'intera valle.</p>
 
-    <div class="card">
-        <h2>La Città delle Acque</h2>
-        <p>
-            Sarno, situata alle falde dell'omonimo monte, è storicamente definita la **"Città delle Acque"**. La sua importanza strategica lungo la Via Popilia era legata non solo alla fertilità del suolo, ma soprattutto alle sorgenti del fiume Sarno, che garantivano rifornimento e irrigazione per l'intera valle. Anticamente conosciuta come *Sarnum*, la città fu un centro vitale per il commercio agroalimentare tra l'entroterra e la costa.
-        </p>
-        <p>
-            Il suo legame con Roma divenne indissolubile dopo le Guerre Sannitiche, trasformandola in un fiorente *municipium*. La presenza della Via Popilia facilitò il trasporto dei rinomati prodotti della terra, consolidando la sua vocazione agricola che perdura ancora oggi.
-        </p>
+    <div class="image-box">
+        <p class="copyright">Immagine di pubblico dominio</p>
     </div>
 
-    <div class="card">
-        <h2>Luoghi di Interesse Archeologico</h2>
-        <p>
-            Il passato monumentale di Sarno è testimoniato da importanti reperti. Il **Teatro Ellenistico-Romano** è uno dei gioielli nascosti della Campania: situato in località Foce, risale al II sec. a.C. e poteva ospitare migliaia di spettatori, confermando l'importanza culturale della città.
-        </p>
-        <p>
-            Altro sito fondamentale è l'**Acquedotto Augusteo del Serino**, una straordinaria opera ingegneristica che attraversava il territorio di Sarno per portare l'acqua fino a Napoli e alla *Classis Misenensis* (la flotta romana a Miseno). I resti dei suoi piloni sono ancora visibili nel paesaggio, simboli della potenza tecnica di Roma.
-        </p>
-    </div>
+    <h2>Storia e Archeologia</h2>
+    <p>In epoca romana, Sarno fu un importante centro agricolo. Tra i resti più significativi spicca il <strong>Teatro Ellenistico-Romano</strong>, un complesso monumentale di rara bellezza. Un altro elemento chiave del territorio è il passaggio dell'<strong>Acquedotto Augusteo del Serino</strong>, che riforniva d'acqua le principali città della costa campana.</p>
 
-    <div class="card">
-        <h2>Il Canale del Gusto</h2>
-        <p>
-            Sarno è il cuore pulsante della produzione del **Pomodoro San Marzano DOP**, l'"oro rosso" della valle. La particolare composizione del terreno, arricchito dalle ceneri vesuviane e irrigato dalle acque pure delle sorgenti, conferisce a questo prodotto un sapore unico, dolce e acido allo stesso tempo, celebrato in tutto il mondo.
-        </p>
-        <p>
-            La tradizione gastronomica è strettamente legata ai cicli agricoli e alle festività religiose, mantenendo vivo un legame profondo con la terra e con il fiume, che rimane la vera anima della città.
-        </p>
-    </div>
+    <h2>L'Oro Rosso</h2>
+    <p>Oggi Sarno è celebre nel mondo per la produzione del <strong>Pomodoro San Marzano DOP</strong>. Il terreno vulcanico e l'abbondanza di acqua rendono quest'area una delle più fertili della Campania, mantenendo viva la vocazione agricola iniziata millenni fa lungo le grandi strade romane.</p>
 
-    <a href="index.html" class="btn-torna">Torna alla Mappa della Via Popilia</a>
+    <a href="index.html" class="footer-link">Torna alla Pagina Principale</a>
+</div>
 
 </body>
 </html>
