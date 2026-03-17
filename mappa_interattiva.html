@@ -1,108 +1,97 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Via Annia Popilia - Mappa Interattiva</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Via Annia Popilia Completa</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    html, body { height: 100%; margin: 0; padding: 0; overflow: hidden; font-family: sans-serif; }
+    #map { height: 100vh; width: 100vw; }
     
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <style>
-        html, body { height: 100%; margin: 0; padding: 0; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        #map { height: 100vh; width: 100vw; }
-        
-        /* CONTENITORE BOTTONI: Ora è al 100% di larghezza per centrare perfettamente */
-        .overlay-buttons {
-            position: absolute; 
-            top: 20px; 
-            width: 100%; 
-            z-index: 1000; 
-            display: flex; 
-            justify-content: center; 
-            gap: 12px;
-            pointer-events: none; /* Permette di toccare la mappa sotto il contenitore vuoto */
-        }
-        
-        .btn-citta {
-            padding: 12px 22px; 
-            font-size: 14px; 
-            font-weight: bold; 
-            color: white;
-            border: none; 
-            border-radius: 50px; /* Più arrotondati, stile moderno */
-            cursor: pointer; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            pointer-events: auto; /* Riattiva i click sui bottoni */
-            transition: transform 0.2s;
-        }
+    .overlay-buttons {
+      position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
+      z-index: 1000; display: flex; gap: 10px;
+    }
+    
+    .btn-citta {
+      padding: 12px 20px; font-size: 14px; font-weight: bold; color: white;
+      border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    .btn-capua { background-color: #333; } 
+    .btn-nola  { background-color: #27ae60; }
+    .btn-sarno { background-color: #2980b9; }
 
-        .btn-citta:hover { transform: scale(1.05); }
-
-        /* Colori dei bottoni */
-        .btn-capua { background-color: #333; } 
-        .btn-nola  { background-color: #A0522D; } /* Terracotta come la pagina Nola */
-        .btn-sarno { background-color: #2980b9; }
-
-        .info-box {
-            position: absolute; bottom: 30px; left: 20px; z-index: 1000;
-            background: white; padding: 15px; border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2); font-size: 13px;
-            border-left: 5px solid #630d0d;
-        }
-    </style>
+    .info-box {
+      position: absolute; bottom: 20px; left: 20px; z-index: 1000;
+      background: white; padding: 10px; border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2); font-size: 13px;
+      border-left: 5px solid #000;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="overlay-buttons">
-        <button class="btn-citta btn-capua" onclick="location.href='capua.html'">Capua</button>
-        <button class="btn-citta btn-nola" onclick="location.href='nola.html'">Nola</button>
-        <button class="btn-citta btn-sarno" onclick="location.href='sarno.html'">Sarno</button>
-    </div>
+  <div class="overlay-buttons">
+    <button class="btn-citta btn-capua" onclick="location.href='capua.html'">Capua</button>
+    <button class="btn-citta btn-nola" onclick="location.href='nola.html'">Nola</button>
+    <button class="btn-citta btn-sarno" onclick="location.href='sarno.html'">Sarno</button>
+  </div>
 
-    <div class="info-box">
-        <strong style="color: #630d0d; font-size: 1.1rem;">Via Annia Popilia</strong><br>
-        Da Capua a Reggio Calabria (II sec. a.C.)
-    </div>
+  <div class="info-box">
+    <strong>Via Annia Popilia</strong><br>
+    Da Capua a Reggio Calabria (II sec. a.C.)
+  </div>
 
-    <div id="map"></div>
+  <div id="map"></div>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        var map = L.map('map', { zoomControl: false }).setView([40.5, 15.5], 7);
-        L.control.zoom({ position: 'bottomright' }).addTo(map);
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map', { zoomControl: false }).setView([40.5, 15.5], 7);
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
 
-        // Percorso storico Via Popilia
-        var viaPopiliaCompleta = [
-            [41.1041, 14.2140], // Capua
-            [41.0000, 14.3500], // Maddaloni
-            [40.9261, 14.5323], // Nola
-            [40.8159, 14.6190], // Sarno
-            [40.7460, 14.7550], // Nocera Inferiore
-            [40.6780, 14.7650], // Salerno
-            [40.4500, 15.2000], // Auletta
-            [40.3000, 15.5500], // Polla
-            [39.3000, 16.2500], // Cosenza
-            [38.6700, 16.1000], // Vibo Valentia
-            [38.1100, 15.6500]  // Reggio Calabria
-        ];
+    // TRACCIATO COMPLETO (Approssimativo storico)
+    // Da Capua a Reggio Calabria
+    var viaPopiliaCompleta = [
+      [41.1041, 14.2140], // Capua
+      [41.0000, 14.3500], // Maddaloni
+      [40.9261, 14.5323], // Nola
+      [40.8159, 14.6190], // Sarno
+      [40.7460, 14.7550], // Nocera Inferiore
+      [40.6780, 14.7650], // Salerno
+      [40.6120, 14.9080], // Battipaglia (Eboli)
+      [40.4500, 15.2000], // Auletta
+      [40.3000, 15.5500], // Vallo di Diano (Polla/Teggiano)
+      [40.0300, 15.8000], // Lagonegro
+      [39.8500, 16.1000], // Castrovillari (Muro Tenente)
+      [39.3000, 16.2500], // Cosenza
+      [38.9000, 16.3000], // Lamezia Terme (Terina)
+      [38.6700, 16.1000], // Vibo Valentia (Hipponium)
+      [38.4500, 15.9000], // Rosarno
+      [38.2500, 15.8000], // Scilla
+      [38.1100, 15.6500]  // Reggio Calabria
+    ];
 
-        var lineaStorica = L.polyline(viaPopiliaCompleta, {
-            color: '#630d0d', 
-            weight: 5, 
-            opacity: 0.8,
-            lineJoin: 'round'
-        }).addTo(map);
+    // Disegno della linea nera e continua
+    var lineaStorica = L.polyline(viaPopiliaCompleta, {
+      color: '#000000', // Nero
+      weight: 4,        // Spessore
+      opacity: 1.0,     // Totalmente opaca
+      lineJoin: 'round'
+    }).addTo(map);
 
-        // Marker per le città interattive
-        L.marker([41.1041, 14.2140]).addTo(map).bindPopup('<b>Capua</b><br>Inizio della Via');
-        L.marker([40.9261, 14.5323]).addTo(map).bindPopup('<b>Nola</b><br>Centro economico');
-        L.marker([40.8159, 14.6190]).addTo(map).bindPopup('<b>Sarno</b>');
-        L.marker([38.1100, 15.6500]).addTo(map).bindPopup('<b>Reggio Calabria</b><br>Fine della Via');
+    // Marker principali
+    L.marker([41.1041, 14.2140]).addTo(map).bindPopup('<b>Capua</b><br>Inizio della Via');
+    L.marker([40.9261, 14.5323]).addTo(map).bindPopup('<b>Nola</b>');
+    L.marker([40.8159, 14.6190]).addTo(map).bindPopup('<b>Sarno</b>');
+    L.marker([38.1100, 15.6500]).addTo(map).bindPopup('<b>Reggio Calabria</b><br>Fine della Via');
 
-        map.fitBounds(lineaStorica.getBounds());
-    </script>
+    // Inquadra l'intera linea al caricamento
+    map.fitBounds(lineaStorica.getBounds());
+  </script>
 </body>
 </html>
