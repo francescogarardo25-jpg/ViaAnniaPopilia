@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nola - Via Popilia</title>
+    <style>
+        /* STILE UGUALE A SEMPRE */
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fdfaf3; /* Pergamena leggermente più chiara */
+            background-image: linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px);
+            background-size: 20px 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #A0522D; /* TERRACOTTA */
+            font-size: 3rem;
+            letter-spacing: 4px;
+            border-bottom: 3px double #A0522D;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        h2, h3 {
+            color: #2E4F4F; /* VERDE PINO SCURO */
+            margin-top: 30px;
+            border-left: 5px solid #A0522D;
+            padding-left: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+            text-align: justify;
+            margin-bottom: 20px;
+            white-space: pre-line;
+        }
+
+        /* COLORE LINK PER NOLA */
+        a {
+            color: #E67E22; /* ARANCIO BRUCIATO */
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #2E4F4F;
+            text-decoration: underline;
+        }
+
+        /* ANIMAZIONE SEMPRE UGUALE */
+        h1, h2, h3, p {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <h1>NOLA</h1>
+
+    <p>Nel II-I secolo a.C. la città nolana era occupata da popolazioni Opico-Osche, fu conquistata dai Sanniti con i quali raggiunse un certo splendore tanto che la città aveva una propria moneta.
+     Dopo le guerre sannitiche divenne alleata di Roma, l’imperatore Ottaviano Augusto possedeva una villa dove morì nel 14 d.C.</p>
+    <h2>ECONOMIA NOLANA</h2>
+    <p>Nola era il cuore della Campania Felix, nel II secolo ritroviamo una produzione massiccia di cereali, ma soprattutto delle nocciole e olive.
+    In questo periodo si intensifica la produzione di vini, grazie alla vicinanza al Vesuvio, che venivano commerciati in tutto il Mediterraneo attraverso il porto di Pozzuoli, questi erano tra i più pregiati dell’Impero Romano e il più famoso era il vitigno greco, considerato uno dei più antichi d’ Italia.</p>
+    <h3>ESTENSIONE</h3>
+    <p>Nel II secolo a.C. Nola era caratterizzata da un vasto territorio agricolo, l’estensione completa era di circa 40 ettari.
+    Le ricerche archeologiche hanno rivelata un’area urbana con abitazioni e necropoli, quest’ultime situate fuori dalle mura stabilendo con certezza il perimetro urbano.
+    La città era difesa da una possente cinta muraria di circa 3 chilometri e questa definiva anche lo status di cittadino, infatti vivere all’interno delle mura significava far parte della città e godere dei culti religiosi.
+    Proprio per quest’immensità, Nola era considerata una delle città più grandi e meglio fortificate della Campania, tanto da essere definita una piccola Roma dallo storico greco Polibio nelle sue Storie dove sottolinea Nola come un centro dotato di una ricchezza che poteva competere con quella dell’Urbe.</p>
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="index.html">← Torna alla Home Page</a>
+    </div>
+
 </body>
 </html>
