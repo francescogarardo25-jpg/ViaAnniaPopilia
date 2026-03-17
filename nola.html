@@ -4,132 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nola - Via Popilia</title>
-   <style>
-        :root {
-            --verde-felix: #2d5a27;   /* Verde lussureggiante delle pianure */
-            --oro-grano: #e3b04b;     /* Oro dei cereali e del sole */
-            --terra-cotta: #bc6c25;   /* Il colore dei vasi nolani */
-            --crema-antico: #fefae0;  /* Sfondo riposante */
-        }
-
+    <style>
+        /* LO STILE DI SEMPRE - NON SI TOCCA */
         body {
-            font-family: 'Optima', 'Segoe UI', serif; /* Font elegante e arioso */
+            font-family: 'Georgia', serif;
             line-height: 1.8;
-            color: #283618;
-            max-width: 900px;
+            color: #333;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0;
-            background-color: var(--crema-antico);
-        }
-
-        /* HEADER INNOVATIVO: Titolo con effetto natura */
-        header {
-            background: linear-gradient(rgba(45, 90, 39, 0.8), rgba(45, 90, 39, 0.8)), 
-                        url('https://www.transparenttextures.com/patterns/leaf.png');
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 8px solid var(--oro-grano);
-        }
-
-        h1 {
-            font-size: 4rem;
-            margin: 0;
-            letter-spacing: 8px;
-            text-transform: uppercase;
-            text-shadow: 3px 3px 0px var(--terra-cotta);
-        }
-
-        .container {
             padding: 40px 20px;
+            background-color: #fdfaf3; /* Pergamena */
+            background-image: linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px);
+            background-size: 20px 100%;
         }
 
-        /* CARD FLUTTUANTI per i testi */
-        section {
-            background: white;
-            margin-bottom: 30px;
-            padding: 40px;
-            border-radius: 0 50px 0 50px; /* Taglio asimmetrico moderno */
-            box-shadow: 15px 15px 0px var(--verde-felix);
-            border: 1px solid var(--verde-felix);
-            transition: transform 0.3s ease;
-        }
-
-        section:hover {
-            transform: scale(1.02);
-        }
-
-        h2 {
-            color: var(--verde-felix);
-            display: flex;
-            align-items: center;
-            font-size: 1.8rem;
-            margin-top: 0;
-        }
-
-        h2::before {
-            content: "🌿"; /* Icona naturale */
-            margin-right: 15px;
-        }
-
-        p {
-            text-align: justify;
-        }
-
-        /* CITAZIONE POLIBIO */
-        .quote {
-            font-style: italic;
-            text-align: center;
-            color: var(--terra-cotta);
-            font-size: 1.3rem;
-            border-top: 1px solid var(--oro-grano);
-            border-bottom: 1px solid var(--oro-grano);
-            padding: 20px;
-            margin: 40px 0;
-        }
-
-        /* BOTTONE TORNA INDIETRO */
-        .nav-footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-bottom: 50px;
-        }
-
-        .btn-back {
-            background-color: var(--verde-felix);
-            color: white !important;
-            padding: 15px 40px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 30px;
-            box-shadow: 0 4px 0px #1a3a16;
-            transition: all 0.2s;
-        }
-
-        .btn-back:hover {
-            background-color: var(--oro-grano);
-            box-shadow: 0 2px 0px #b8860b;
-            transform: translateY(2px);
-        }
-
-        /* ANIMAZIONE */
-        section { animation: slideIn 0.8s ease-out; }
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(-30px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>NOLA</h1>
-    <p style="letter-spacing: 3px; font-weight: bold;">L'OMBELICO DELLA CAMPANIA FELIX</p>
-</header>
-
-<div class="container">
-
-    <section>
         h1 {
             text-align: center;
             color: #A0522D; /* TERRACOTTA */
@@ -141,7 +29,7 @@
         }
 
         h2, h3 {
-            color: #2E4F4F; /* VERDE PINO SCURO */
+            color: #2E4F4F; /* VERDE PINO */
             margin-top: 30px;
             border-left: 5px solid #A0522D;
             padding-left: 15px;
@@ -156,10 +44,9 @@
             box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
             text-align: justify;
             margin-bottom: 20px;
-            white-space: pre-line;
+            white-space: pre-line; /* Fondamentale per gli a capo */
         }
 
-        /* COLORE LINK PER NOLA */
         a {
             color: #E67E22; /* ARANCIO BRUCIATO */
             text-decoration: none;
@@ -172,7 +59,7 @@
             text-decoration: underline;
         }
 
-        /* ANIMAZIONE SEMPRE UGUALE */
+        /* ANIMAZIONE */
         h1, h2, h3, p {
             animation: fadeIn 1s ease-in;
         }
@@ -188,17 +75,20 @@
     <h1>NOLA</h1>
 
     <p>Nel II-I secolo a.C. la città nolana era occupata da popolazioni Opico-Osche, fu conquistata dai Sanniti con i quali raggiunse un certo splendore tanto che la città aveva una propria moneta.
-     Dopo le guerre sannitiche divenne alleata di Roma, l’imperatore Ottaviano Augusto possedeva una villa dove morì nel 14 d.C.</p>
+    Dopo le guerre sannitiche divenne alleata di Roma, l’imperatore Ottaviano Augusto possedeva una villa dove morì nel 14 d.C.</p>
+
     <h2>ECONOMIA NOLANA</h2>
     <p>Nola era il cuore della Campania Felix, nel II secolo ritroviamo una produzione massiccia di cereali, ma soprattutto delle nocciole e olive.
     In questo periodo si intensifica la produzione di vini, grazie alla vicinanza al Vesuvio, che venivano commerciati in tutto il Mediterraneo attraverso il porto di Pozzuoli, questi erano tra i più pregiati dell’Impero Romano e il più famoso era il vitigno greco, considerato uno dei più antichi d’ Italia.</p>
+
     <h3>ESTENSIONE</h3>
     <p>Nel II secolo a.C. Nola era caratterizzata da un vasto territorio agricolo, l’estensione completa era di circa 40 ettari.
     Le ricerche archeologiche hanno rivelata un’area urbana con abitazioni e necropoli, quest’ultime situate fuori dalle mura stabilendo con certezza il perimetro urbano.
     La città era difesa da una possente cinta muraria di circa 3 chilometri e questa definiva anche lo status di cittadino, infatti vivere all’interno delle mura significava far parte della città e godere dei culti religiosi.
     Proprio per quest’immensità, Nola era considerata una delle città più grandi e meglio fortificate della Campania, tanto da essere definita una piccola Roma dallo storico greco Polibio nelle sue Storie dove sottolinea Nola come un centro dotato di una ricchezza che poteva competere con quella dell’Urbe.</p>
+
     <div style="text-align: center; margin-top: 40px;">
-        <a href="index.html">← Torna alla mappa</a>
+        <a href="mappa_interattiva.html">← Torna alla mappa</a>
     </div>
 
 </body>
