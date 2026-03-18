@@ -5,78 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarno - Via Popilia</title>
     <style>
+        /* Reset e Stile Base (Coerente con Index) */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
+            color: #333;
         }
 
+        /* Container Centrale */
         .container {
             max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 30px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
+        /* Tipografia */
         h1 {
-            color: #007ba7;
+            color: #007ba7; /* Blu Fiume */
             text-align: center;
+            font-size: 2.5rem;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         h2 {
             color: #007ba7;
-            margin-top: 25px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 40px;
         }
 
         p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-align: justify;
         }
 
-        /* I LINK CHE VOLEVI STACCATI */
-        a {
+        strong {
+            color: #222;
+        }
+
+        /* Link nel Testo (Colore Arancio per contrasto) */
+        p a {
             color: #d35400; 
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.2s ease;
         }
 
-        a:hover {
+        p a:hover {
+            color: #e67e22;
             text-decoration: underline;
         }
 
-        /* IL BOTTONE UGUALE ALLA INDEX */
-        .btn-back {
-            display: block;
-            width: 200px;
-            margin: 30px auto 0;
-            padding: 12px;
+        /* Pulsante di Navigazione */
+        .nav-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
             background-color: #007ba7;
-            color: white !important;
-            text-align: center;
+            color: #ffffff !important;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+
+        .center {
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Sarno</h1>
-    
-    <p>Sarno è storicamente conosciuta come la <strong>"Città delle Acque"</strong>. Situata ai piedi del monte omonimo, la sua importanza lungo la <a href="https://it.wikipedia.org/wiki/Via_Popilia">Via Popilia</a> era legata alle sorgenti del fiume Sarno, risorsa vitale per l'agricoltura e i commerci dell'intera valle.</p>
+    <div class="container">
+        <h1>Sarno</h1>
+        
+        <p>
+            Sarno, storicamente nota come la <strong>"Città delle Acque"</strong>, rappresentava una tappa fondamentale lungo la <a href="https://it.wikipedia.org/wiki/Via_Popilia">Via Popilia</a>. La sua posizione strategica alle falde del monte omonimo permetteva il controllo delle sorgenti del fiume Sarno, una risorsa che ha garantito per millenni la fertilità straordinaria della valle.
+        </p>
 
-    <h2>Storia e Archeologia</h2>
-    <p>In epoca romana, Sarno fu un importante centro agricolo. Tra i resti più significativi spicca il <strong>Teatro Ellenistico-Romano</strong>, un complesso monumentale di rara bellezza. Un altro elemento chiave del territorio è il passaggio dell'<strong>Acquedotto Augusteo del Serino</strong>, che riforniva d'acqua le principali città della costa campana.</p>
+        <h2>Patrimonio Archeologico</h2>
+        <p>
+            Il cuore antico di Sarno custodisce il <strong>Teatro Ellenistico-Romano</strong> di Foce, un monumento di eccezionale valore che testimonia l'importanza culturale della città in epoca romana. Non meno rilevante è l'imponente <strong>Acquedotto Augusteo del Serino</strong>, i cui resti ricordano la grandezza dell'ingegneria idraulica romana che riforniva l'intera area flegrea.
+        </p>
 
-    <h2>L'Oro Rosso</h2>
-    <p>Oggi Sarno è celebre nel mondo per la produzione del <strong>Pomodoro San Marzano DOP</strong>. Il terreno vulcanico e l'abbondanza di acqua rendono quest'area una delle più fertili della Campania, mantenendo viva la vocazione agricola iniziata millenni fa lungo le grandi strade romane.</p>
+        <h2>Eccellenze del Territorio</h2>
+        <p>
+            Oggi, l'eredità agricola di Sarno vive nel celebre <strong>Pomodoro San Marzano DOP</strong>. Grazie al microclima ideale e alla ricchezza d'acqua, questo "oro rosso" è diventato il simbolo della gastronomia locale, mantenendo intatto quel legame con la terra che caratterizzava il passaggio dei viaggiatori lungo l'antica via consolare.
+        </p>
 
-    <a href="mappa_interattiva.html" class="btn-back">Torna alla mappa</a>
-</div>
+        <div class="center">
+            <a href="index.html" class="nav-button">Torna alla Pagina Principale</a>
+        </div>
+    </div>
 
 </body>
 </html>
