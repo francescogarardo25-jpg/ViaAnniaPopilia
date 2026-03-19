@@ -9,18 +9,35 @@
     html, body { height: 100%; margin: 0; padding: 0; overflow: hidden; font-family: sans-serif; }
     #map { height: 100vh; width: 100vw; }
     
+    /* Pulsanti in alto */
     .overlay-buttons {
       position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
       z-index: 1000; display: flex; gap: 10px;
     }
     
+    /* Pulsante Home in basso */
+    .home-container {
+      position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+      z-index: 1000;
+    }
+
     .btn-citta {
       padding: 12px 20px; font-size: 14px; font-weight: bold; color: white;
       border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      transition: transform 0.2s;
     }
+    .btn-citta:active { transform: scale(0.95); }
+
     .btn-capua { background-color: #333; } 
     .btn-nola  { background-color: #27ae60; }
     .btn-sarno { background-color: #2980b9; }
+    
+    /* Stile tasto Home */
+    .btn-home { 
+      background-color: #a93226; /* Rosso Pompeiano */
+      padding: 15px 30px; font-size: 16px; text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
     .info-box {
       position: absolute; bottom: 20px; left: 20px; z-index: 1000;
@@ -36,6 +53,10 @@
     <button class="btn-citta btn-capua" onclick="location.href='capua.html'">Capua</button>
     <button class="btn-citta btn-nola" onclick="location.href='nola.html'">Nola</button>
     <button class="btn-citta btn-sarno" onclick="location.href='sarno.html'">Sarno</button>
+  </div>
+
+  <div class="home-container">
+    <button class="btn-citta btn-home" onclick="location.href='index.html'">Torna alla Home</button>
   </div>
 
   <div class="info-box">
@@ -54,8 +75,7 @@
       attribution: '&copy; OpenStreetMap'
     }).addTo(map);
 
-    // TRACCIATO COMPLETO (Approssimativo storico)
-    // Da Capua a Reggio Calabria
+    // TRACCIATO COMPLETO
     var viaPopiliaCompleta = [
       [41.1041, 14.2140], // Capua
       [41.0000, 14.3500], // Maddaloni
@@ -69,18 +89,17 @@
       [40.0300, 15.8000], // Lagonegro
       [39.8500, 16.1000], // Castrovillari (Muro Tenente)
       [39.3000, 16.2500], // Cosenza
-      [38.9000, 16.3000], // Lamezia Terme (Terina)
-      [38.6700, 16.1000], // Vibo Valentia (Hipponium)
+      [39.8500, 16.1000], // Lamezia Terme
+      [38.6700, 16.1000], // Vibo Valentia
       [38.4500, 15.9000], // Rosarno
       [38.2500, 15.8000], // Scilla
       [38.1100, 15.6500]  // Reggio Calabria
     ];
 
-    // Disegno della linea nera e continua
     var lineaStorica = L.polyline(viaPopiliaCompleta, {
-      color: '#000000', // Nero
-      weight: 4,        // Spessore
-      opacity: 1.0,     // Totalmente opaca
+      color: '#000000',
+      weight: 4,
+      opacity: 1.0,
       lineJoin: 'round'
     }).addTo(map);
 
@@ -90,7 +109,6 @@
     L.marker([40.8159, 14.6190]).addTo(map).bindPopup('<b>Sarno</b>');
     L.marker([38.1100, 15.6500]).addTo(map).bindPopup('<b>Reggio Calabria</b><br>Fine della Via');
 
-    // Inquadra l'intera linea al caricamento
     map.fitBounds(lineaStorica.getBounds());
   </script>
 </body>
