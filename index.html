@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIA POPILIA</title>
+    <title>VIA ANNIA POPILIA - Home</title>
     
-    <meta name="keywords" content="strade, roma, annia pompilia, antica roma" />
+    <meta name="keywords" content="strade roma, annia popilia, antica roma, archeologia, sud italia" />
     <meta name="robots" content="index, follow"/>
     
-    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
     <link rel="canonical" href="https://francescogarardo25-jpg.github.io/ViaAnniaPopilia/"/>
 
     <style>
-        /* CSS Rinforzato */
+        /* BACKGROUND & TEXT */
         body {
             font-family: 'Georgia', serif;
             line-height: 1.8;
@@ -23,79 +20,108 @@
             margin: 0 auto;
             padding: 40px 20px;
             background-color: #f9f7f2;
-            background-image: linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px);
+            /* Righine verticali color sabbia/pompeiano chiarissimo per effetto pergamena */
+            background-image: linear-gradient(to right, rgba(169, 50, 38, 0.03) 1px, transparent 1px);
             background-size: 20px 100%;
         }
 
+        /* TITOLO PRINCIPALE - ROSSO POMPEIANO */
         h1 {
             text-align: center;
-            color: #630d0d;
+            color: #a93226; 
             font-size: 3rem;
             letter-spacing: 4px;
-            border-bottom: 3px double #630d0d;
+            border-bottom: 3px double #a93226;
             margin-bottom: 50px;
             text-transform: uppercase;
+            padding-bottom: 10px;
         }
 
-        h2, h3, h4, h5, h6 {
-            color: #8b4513;
-            margin-top: 30px;
-            border-left: 5px solid #630d0d;
+        /* SOTTOTITOLI - BORDO POMPEIANO */
+        h2, h3, h4 {
+            color: #8b4513; /* Marrone terra per il testo */
+            margin-top: 40px;
+            border-left: 5px solid #a93226; /* Bordo decorativo Pompeiano */
             padding-left: 15px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
+        /* PARAGRAFI */
         p {
             background: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 4px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.04);
             text-align: justify;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(169, 50, 38, 0.05);
         }
 
-        /* Link dorati e cliccabili */
+        /* LINK */
         a {
-            color: #b8860b;
+            color: #b8860b; /* Oro brunito */
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
-            border-bottom: 1px solid transparent;
         }
 
         a:hover {
-            color: #630d0d;
-            border-bottom: 1px solid #630d0d;
+            color: #a93226;
+            text-decoration: underline;
         }
 
-        /* Pulsante Mappa Speciale */
+        /* CONTAINER BOTTONI FINALI */
+        .button-container {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 15px; 
+            margin-top: 60px;
+        }
+
+        /* BOTTONI - ROSSO POMPEIANO */
         .btn-mappa {
-            display: block;
+            display: inline-block;
             text-align: center;
-            margin: 50px auto;
-            padding: 15px 30px;
-            background-color: #630d0d;
+            padding: 18px 35px;
+            background-color: #a93226; /* Rosso Pompeiano */
             color: white !important;
             border-radius: 50px;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 15px rgba(99, 13, 13, 0.3);
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(169, 50, 38, 0.3);
             text-decoration: none;
-            width: fit-content;
+            transition: all 0.3s ease;
         }
 
         .btn-mappa:hover {
-            background-color: #8b0000;
-            transform: scale(1.05);
+            background-color: #800020; /* Vira verso l'Amaranto al passaggio */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(128, 0, 32, 0.4);
         }
 
+        /* BOTTONE LEGENDA - ORO */
+        .btn-legenda {
+            background-color: #b8860b; 
+            box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+        }
+
+        .btn-legenda:hover {
+            background-color: #966f08;
+            box-shadow: 0 6px 20px rgba(150, 111, 8, 0.4);
+        }
+
+        /* ANIMAZIONE */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        h1, h2, h3, h4, h5, h6, p {
-            animation: fadeIn 1s ease-in;
+        body > * {
+            animation: fadeIn 0.8s ease-out forwards;
         }
     </style>
 </head>
