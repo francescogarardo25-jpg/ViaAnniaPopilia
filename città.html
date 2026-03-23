@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legenda Colori - Via Popilia</title>
+    <style>
+        /* STILE COERENTE CON L'INDEX */
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f7f2;
+            background-image: linear-gradient(to right, rgba(169, 50, 38, 0.03) 1px, transparent 1px);
+            background-size: 20px 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #a93226; /* Rosso Pompeiano della Home */
+            font-size: 3rem;
+            letter-spacing: 4px;
+            border-bottom: 3px double #a93226;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        /* TITOLI SPECIFICI PER CITTÀ */
+        h2, h3, h4 {
+            margin-top: 40px;
+            padding-left: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.8rem;
+        }
+
+        /* CAPUA - AMARANTO */
+        .titolo-capua {
+            color: #800020 !important;
+            border-left: 5px solid #d4af37; /* Bordo Oro */
+        }
+
+        /* NOLA - VERDE FELIX */
+        .titolo-nola {
+            color: #2d5a27 !important;
+            border-left: 5px solid #d35400; /* Bordo Terracotta */
+        }
+
+        /* SARNO - BLU ACQUA */
+        .titolo-sarno {
+            color: #007ba7 !important;
+            border-left: 5px solid #007ba7;
+        }
+
+        p {
+            background: white;
+            padding: 25px;
+            border-radius: 4px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        /* STILE BOTTONE TORNA HOME */
+        .btn-home {
+            display: block;
+            text-align: center;
+            margin: 50px auto;
+            padding: 15px 30px;
+            background-color: #a93226; /* Rosso Pompeiano */
+            color: white !important;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            width: fit-content;
+            box-shadow: 0 4px 15px rgba(169, 50, 38, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-home:hover {
+            background-color: #800020;
+            transform: scale(1.05);
+        }
+
+        /* ANIMAZIONE */
+        h1, h2, h3, h4, p, .btn-home {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+  
+</body>
+</html>
