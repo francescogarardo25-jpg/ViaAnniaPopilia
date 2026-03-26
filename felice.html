@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cippus - Nola</title>
+    <style>
+        /* CSS STRUTTURALE ORIGINALE */
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f7f2;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px);
+            background-size: 20px 100%;
+        }
+
+        /* TUTTI I TITOLI GRANDI UGUALI E VERDI */
+        h1, h2, h3, h4, h5 {
+            color: #2d5a27; /* VERDE FELIX */
+            font-size: 2.2rem; /* Dimensione unica per tutti */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #2d5a27;
+            padding-left: 15px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Eccezione solo per la posizione del titolo principale */
+        h1 {
+            text-align: center;
+            border-left: none;
+            border-bottom: 3px double #2d5a27;
+            padding-left: 0;
+            padding-bottom: 10px;
+        }
+
+        p {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+            text-align: justify;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Stile specifico per le didascalie delle traduzioni per mandarle a capo */
+        .source-credit {
+            display: block;
+            font-style: italic;
+            margin-top: 10px;
+            font-size: 0.95rem;
+            color: #555;
+            text-align: right;
+        }
+
+        /* Pulsante Mappa in VERDE FELIX */
+        .btn-mappa {
+            display: block;
+            text-align: center;
+            margin: 50px auto;
+            padding: 15px 30px;
+            background-color: #2d5a27; 
+            color: white !important;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(45, 90, 39, 0.3);
+            text-decoration: none;
+            width: fit-content;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .btn-mappa:hover {
+            background-color: #1e3d1a;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+  <h1>TOMBA DI SAN FELICE</h1>
+  <p>San Felice nasce nella seconda metà del III secolo, il termine “in Pincis” deriva da una chiesa a lui  dedicata a nel V secolo d.C. presso la domus Pincia a Roma. 
+
+Muore il 14 gennaio di un anno ancora sconosciuto, la sua tomba è importante poiché rappresenta una testimonianza significativa del primo cristianesimo in Campania, su di essa erano presenti dei fori che permettevano ai fedeli di calare oggetti affinché toccassero la tomba del santo, trasformandoli in reliquie di contatto (brandea) 
+
+La tomba si trova a Cimitile, il suo nome deriva dal latino Coemeterium (cimitero), l'antica necropoli. Qui fu deposto il corpo del Santo e il nome con cui è conosciuto il suo sepolcro è Ara Veritatis, ovvero il luogo sacro dove la falsa testimonianza veniva punita da Dio. </p>
+<h2>basilica vetus</h2>
+  <p>La basilica Vetus (Basilica Antica) di Cimitile sorge sopra la tomba di San Felice. Il luogo in cui fu sepolto il santo era una necropoli, ma con la diffusione del cristianesimo la tomba divenne oggetto di venerazione, pertanto fu edificata su di essa, nel IV secolo d. C., una struttura a tre navate progettata per gestire i numerosi pellegrini che visitavano il sito per il dies natalis (giorno della morte o nascita al cielo) di San Felice. 
+
+Quando San Paolino arrivò a Nola trovò questa Basilica ormai insufficiente per la folla di pellegrini, perciò la modificò radicalmente abbattendo la navata a nord della Basilica Vetus realizzando il triforio, un’apertura a tre archi che collegava la vecchia chiesa alla nuova Basilica Nova (V secolo d.C).  </p>
+<img src="tomba.jpeg" alt="basilica Vetus - Cimitile" 
+         style="width: 100%; display: block; border-radius: 8px; border: 4px solid #2d5a27 !important; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+    
+    <div style="padding: 15px; background: transparent !important; box-shadow: none !important;">
+        <p style="font-size: 1.1rem; color: #2d5a27 !important; font-weight: bold; font-style: italic; margin: 0; background: none !important; box-shadow: none !important; padding: 0 !important;">
+            
+        </p>
+        <p style="font-size: 0.75rem; color: #b35a38 !important; margin-top: 5px; background: none !important; box-shadow: none !important; padding: 0 !important; font-family: sans-serif;">
+            Foto di <strong>MentNFG</strong> (2024) - Tratta da Wikipedia
+        </p>
+    </div>
+</div>
+  <a href="nola.html" class="btn-mappa">← TORNA SU NOLA</a>   
+</body>
+</html>
