@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>museo Archeologico di Nola - Nola</title>
+    <style>
+        /* CSS STRUTTURALE ORIGINALE */
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f7f2;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px);
+            background-size: 20px 100%;
+        }
+
+        /* TUTTI I TITOLI GRANDI UGUALI E VERDI */
+        h1, h2, h3, h4, h5 {
+            color: #2d5a27; /* VERDE FELIX */
+            font-size: 2.2rem; /* Dimensione unica per tutti */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #2d5a27;
+            padding-left: 15px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Eccezione solo per la posizione del titolo principale */
+        h1 {
+            text-align: center;
+            border-left: none;
+            border-bottom: 3px double #2d5a27;
+            padding-left: 0;
+            padding-bottom: 10px;
+        }
+
+        p {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+            text-align: justify;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Link in TERRACOTTA */
+        a {
+            color: #bc6c25; 
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #2d5a27;
+            border-bottom: 1px solid #2d5a27;
+        }
+
+        /* Pulsante Mappa in VERDE FELIX */
+        .btn-mappa {
+            display: block;
+            text-align: center;
+            margin: 50px auto;
+            padding: 15px 30px;
+            background-color: #2d5a27; 
+            color: white !important;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(45, 90, 39, 0.3);
+            text-decoration: none;
+            width: fit-content;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .btn-mappa:hover {
+            background-color: #1e3d1a;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+<h1>MUSEO ARCHEOLOGICO DI NOLA</h1>
+<p>Diversi i musei Campani che raccontano la storia degli Osci nelle sue varianti locali. Testimonianze osche, tombe dipinte del IV secolo a.C., corredi funerari, l’epigrafe osca del II secolo a.C. ritrovata a San Paolo Bel Sito sono nel Museo Archeologico di Nola. 
+ </p>
+
+   <img src="museo_nola.jpeg" alt="" 
+         style="width: 100%; display: block; border-radius: 8px; border: 4px solid #2d5a27 !important; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+    
+    <div style="padding: 15px; background: transparent !important; box-shadow: none !important;">
+        <p style="font-size: 1.1rem; color: #2d5a27 !important; font-weight: bold; font-style: italic; margin: 0; background: none !important; box-shadow: none !important; padding: 0 !important;">
+           corredo funerario Osco
+        </p>
+        <p style="font-size: 0.75rem; color: #b35a38 !important; margin-top: 5px; background: none !important; box-shadow: none !important; padding: 0 !important; font-family: sans-serif;">
+            Foto di <strong>ministero della cultura</strong>  - Tratta da Museo Archeologico di Nola
+        </p>
+    </div>
+</div>
+    <a href="nola.html" class="btn-mappa">← TORNA SU NOLA</a>   
+</body>
+</html>
